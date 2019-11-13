@@ -139,7 +139,13 @@
 
                 <div class="info_section__item info_content--drone-img">
                   <div class="info_content--drone-img">
-                    <img class="main-img" src="img/drone-layer.png" title="img">
+                    <picture>
+                      <source srcset="img/drone-layer--bg.png" media="(min-width: 999px)">
+                      <source srcset="img/drone-layer--md.png" media="(min-width: 650px)">
+                      <source srcset="img/drone-layer--sm.png" media="(max-width: 649px)">
+                      <img  src="img/drone-layer--bg.png" title="img" style="width:auto;">
+                      
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -150,8 +156,57 @@
             <div class="container--bg">
               <div class="portfolio_section__body">
                 <div class="portfolio_section__content">
+                  <div class="video-text">
+                    <div class="portfolio_section__item video-wrapper">
+                      <iframe width="750" height="530" src="https://www.youtube.com/embed/HSsqzzuGTPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="portfolio_section__item">
+                      <div class="portfolio_content--text">
+                        <header class="portfolio_content--text section_title__header">
+                          <h2 class="section_title">Nature from the air</h2>
+                        </header>
+
+                        <span class="section_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repudiandae eius perferendis, minima modi tenetur quibusdam ullam natus vero.</span>
+
+                        <div class="price-content--btn">
+                          <button class="btn btn--secondary" type="submit">Ask for price
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                   <div class="video-text">
+                    <div class="portfolio_section__item">
+                      <div class="portfolio_content--text">
+                        <header class="portfolio_content--text section_title__header">
+                          <h2 class="section_title">City from the air</h2>
+                        </header>
+
+                        <span class="section_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repudiandae eius perferendis, minima modi tenetur quibusdam ullam natus vero.</span>
+
+                        <div class="price-content--btn">
+                          <button class="btn btn--secondary" type="submit">Ask for price
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="portfolio_section__item video-wrapper">
+                       <iframe width="750" height="530" src="https://www.youtube.com/embed/7S7smPw9EiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                 
+                </div>
+
+
+
+
+
+<!--                 <div class="portfolio_section__content">
                   <div class="portfolio_section__item video-wrapper">
-                    <iframe width="750" height="530" src="https://www.youtube.com/embed/HSsqzzuGTPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <iframe width="750" height="530" src="https://www.youtube.com/embed/HSsqzzuGTPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                   <div class="portfolio_section__item">
                     <div class="portfolio_content--text">
                       <header class="portfolio_content--text section_title__header">
@@ -181,8 +236,9 @@
                     </div>
                   </div>
                   <div class="portfolio_section__item video-wrapper">
-                    <iframe width="750" height="530" src="https://www.youtube.com/embed/7S7smPw9EiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                </div>
+                    <iframe width="750" height="530" src="https://www.youtube.com/embed/7S7smPw9EiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div> -->
               </div>
             </div>
           </section>

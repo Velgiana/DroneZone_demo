@@ -95,7 +95,8 @@ button:hover{
 .header_title{
   font-size: 48px;
   font-weight: bold;
-  line-height: 0.7;
+  font-family: ProximaNovaBold;
+  line-height: 1;
   padding-bottom: 20px;
   color: #fff;
   margin: 0;
@@ -108,9 +109,11 @@ button:hover{
 }
 
 .section_title{
+  font-family: ProximaNovaBold;
   font-weight: bold;
   font-size:  48px;
-  line-height: 0.75;
+  line-height: 1;
+  text-align: left;
   background: -webkit-linear-gradient(rgb(202, 0, 52), #dd5908);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -120,6 +123,7 @@ button:hover{
   color: rgb(94, 99, 114);
   text-align: left;
   line-height: 48px;
+  padding-bottom: 3em;
 }
 
 .icons_section__item h4{
@@ -127,7 +131,6 @@ button:hover{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 /******************************
 *** BACKGROUNDS***
 *******************************/
@@ -426,6 +429,7 @@ button.scroll_down:before {
 .info_section__body{
   display: flex;
   flex-direction: row;
+  /*flex-wrap: wrap-reverse;*/
 }
 .points-content__item{
   font-size: 14px;
@@ -434,19 +438,18 @@ button.scroll_down:before {
   text-align: left;
 }
 .points-content{
-  display: flex;
-  flex-direction: row;
+
 }
 
 .rounded{
   counter-reset: li;
   list-style: none; 
-  padding: 0;
+  /*padding: 0;*/
 }
 .rounded a {
   position: relative;
   display: block;
-  padding: .4em .4em .4em 2em;
+  padding: .4em .4em .4em 3em;
   margin: 2em 0;
   color: #444;
   text-decoration: none;
@@ -486,8 +489,13 @@ button.scroll_down:before {
 }
 .portfolio_section__content{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+.video-text{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
 }
 .portfolio_section__item{
   flex-basis: 50%;
@@ -495,17 +503,31 @@ button.scroll_down:before {
 .portfolio_content--text{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 .portfolio_content--text{
-  width: 70%;
-
+  width: 75%;
+  margin: 0 auto;
 }
 .portfolio_content--text .price-content--btn{
   margin: 0;
+}
+.video-wrapper{
+  /*background-color: yellow;*/
+  width: 50%;
+  height: 70vh;
 
 }
 .video-wrapper{
+  width: 100%;
+  position: relative;
+  /*padding-bottom: 56.5%;*/
+  height: 70vh;
+}
+
+.video-wrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 70vh;
 }
@@ -539,7 +561,7 @@ input{
   position: absolute;
   top: -3px;
   border: none;
-  width: 15.5em;
+  width: 16em;
   height: 3em;
   padding-left: 2em;
   border-radius: 30px 0 0 30px;
@@ -548,6 +570,7 @@ input{
 .form__group{
   background: transparent;
   mix-blend-mode: multiply;
+  border-radius: 30px;
 }
 
 .form__body{
