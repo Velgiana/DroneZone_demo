@@ -1,3 +1,15 @@
+@font-face {
+  font-family: ProximaNovaRegular;
+  src:url('../fonts/ProximaNova-Regular.ttf');
+}
+@font-face {
+  font-family: ProximaNovaBold;
+  src:url('../fonts/ProximaNova-Bold.ttf');
+}
+@font-face {
+  font-family: ProximaNovaLight;
+  src:url('../fonts/ProximaNova-Light.ttf');
+}
 html,
 body {
   padding: 0;
@@ -8,7 +20,7 @@ body {
 }
 
 body{
-  font-family: 'Lato', sans-serif;
+  font-family: ProximaNovaRegular;
   line-height: 1;
   color: rgb(94, 99, 114);
   margin:auto;
@@ -211,14 +223,15 @@ button:hover{
   margin: 30px;
 }
 .site_main--btn button{
+  position: relative;
   border-radius: 30px;
   width: 205px;
   height: 50px;
 }
 .price-content--btn{
   border-radius: 30px;
-  background: linear-gradient( -118deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 100%);
-  background-color: #0d0b52;
+  /*background: linear-gradient( -118deg, rgb(255,255,255) 0%, rgba(255,255,255,0) 100%);*/
+  background-color: #4762a9;
   color: #fff;
   width: 205px;
   height: 50px;
@@ -228,7 +241,103 @@ button:hover{
   border-radius: 30px;
   width: 205px;
   height: 50px;
+}
+.btn--primary span::after {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: 27px; 
+  bottom: 15px; /* Положение треугольника */
+  border: 10px solid transparent; 
+  border-left: 16px solid #fff;
+}
+.btn--primary span:hover::after {
+  content: ''; 
+  border-left: 16px solid #da4718;
+}
 
+/******************************
+*** SCROLL BUTTON***
+*******************************/
+.header_content{
+  position: relative;
+}
+.site_main__scroll-button{
+  position: absolute;
+  bottom: -140%;
+  left: 45%;
+}
+.wrapper {
+  height: 10vh;
+  max-width: 50px;
+  margin: auto;
+  position: relative;
+}
+.wrapper span{
+  position: absolute;
+  top: 25px;
+}
+button.scroll_down {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 30px;
+  bottom: 60px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button.scroll_down:before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scroll_down_btn-animation 2s infinite;
+  animation: scroll_down_btn-animation 2s infinite;
+  box-sizing: border-box;
+}
+
+@keyframes scroll_down_btn-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scroll_down_btn-animation {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /******************************
@@ -263,9 +372,7 @@ button:hover{
 
 .site_main{
   display: flex;
-  /*justify-content: center;*/
   flex-direction: column;
-  /*align-items: center;*/
   text-align: center;
   margin: 0 auto;
 }
@@ -275,10 +382,6 @@ button:hover{
   top: 25%;
   left: 25%;
 }
-
-/******************************
-*** SCROLL BUTTON***
-*******************************/
 
 /******************************
 *** ICONS_SECTION***
@@ -301,7 +404,7 @@ button:hover{
 .icons_section__item{
   display: flex;
   flex-direction: column;
-  max-width: 20%;
+  flex-basis: 25%;
   align-items: center;
 }
 .icons_section__item span{
@@ -433,14 +536,19 @@ form{
 }
 
 input{
+  position: absolute;
+  top: -3px;
   border: none;
-  width: 26em;
+  width: 15.5em;
   height: 3em;
   padding-left: 2em;
-  border-radius: 30px;
+  border-radius: 30px 0 0 30px;
   font-size: 18px;
 }
-
+.form__group{
+  background: transparent;
+  mix-blend-mode: multiply;
+}
 
 .form__body{
   margin: 2em auto 2em auto;
@@ -453,15 +561,14 @@ input{
   position: absolute;
   width: 9em;
   height: 3em;
-  background: transparent;
-  mix-blend-mode: multiply;
+  background-color: #fff;
   box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   border-radius: 30px;
 }
 
 .form__submit .btn_form{
   top: -1px;
-  right: -38px;
+  right: -3px;
 }
 
 /******************************
