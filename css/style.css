@@ -122,8 +122,8 @@ button:hover{
   font-size: 18px;
   color: rgb(94, 99, 114);
   text-align: left;
-  line-height: 48px;
-  padding-bottom: 3em;
+  line-height: 43px;
+  padding-bottom: 2em;
 }
 
 .icons_section__item h4{
@@ -429,6 +429,7 @@ button.scroll_down:before {
 .info_section__body{
   display: flex;
   flex-direction: row;
+  padding: 3em 0 3em;
   /*flex-wrap: wrap-reverse;*/
 }
 .points-content__item{
@@ -469,9 +470,18 @@ button.scroll_down:before {
   line-height: 3em;
   text-align: center;
   font-weight: bold;
+  font-size: 18px;
   border-radius: 2em;
   transition: all .3s ease-out;
 }
+/*.column{
+  -moz-column-width: 200px;
+  column-width: 200px;
+  -moz-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 30px;
+  column-gap: 10px;
+}*/
 /*.points-content__item{
   display: inline-flex;
   justify-content: space-around;
